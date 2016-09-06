@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Text,
   StyleSheet,
   View,
   ListView
@@ -9,7 +8,10 @@ import TaskRow from './TaskRow';
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 40
+    paddingTop: 40,
+    backgroundColor: '#ecf0f1',
+    flex: 1,
+    justifyContent: 'flex-start'
   }
 });
 

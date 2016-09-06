@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginLeft: 20,
     marginRight: 20
+  },
+  label: {
+    fontSize: 20,
+    fontWeight: '300'
   }
 });
 
@@ -24,7 +28,7 @@ class TaskRow extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.todo.task}</Text>
+        <Text style={styles.label}>{this.props.todo.task}</Text>
       </View>
     );
   }
