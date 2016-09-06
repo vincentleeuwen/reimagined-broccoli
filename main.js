@@ -32,7 +32,7 @@ class PluralTodo extends Component {
   renderScene(route, nav) {
     switch (route.name) {
       case 'taskform':
-        return <Text>Add form comes here!</Text>;
+        return <Text style={{paddingTop: 40}}>Add form comes here!</Text>;
       default:
         return (
             <TaskList
@@ -43,9 +43,14 @@ class PluralTodo extends Component {
     }
   }
 
+  configureScene() {
+    return Navigator.SceneConfigs.FloatFromBottom;
+  }
+
   render() {
     return (
       <Navigator
+        configureScene={this.configureScene}
         initialRoute={{name: 'taskList', index: 0}}
         ref={(nav => {
           this.nav = nav;
